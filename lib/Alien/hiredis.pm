@@ -5,15 +5,18 @@ use warnings;
 
 our $VERSION = '0.001';
 
+use parent 'Alien::Base';
+
 1;
 
 =head1 NAME
 
-Alien::hiredis - Module abstract
-
-=head1 SYNOPSIS
+Alien::hiredis - Alien wrapper for hiredis
 
 =head1 DESCRIPTION
+
+This module provides the C<hiredis> minimalistic C client library for the
+L<Redis|https://redis.io> database. See L<Alien::Base> for usage.
 
 =head1 BUGS
 
@@ -33,3 +36,4 @@ This is free software, licensed under:
 
 =head1 SEE ALSO
 
+L<Redis>, L<Redis::hiredis>
