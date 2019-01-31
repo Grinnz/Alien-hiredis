@@ -30,9 +30,9 @@ my %WriteMakefileArgs = (
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.52",
     "File::Spec" => 0,
+    "Test2::V0" => 0,
     "Test::Alien" => 0,
-    "Test::More" => 0,
-    "Test::V0" => 0
+    "Test::More" => 0
   },
   "VERSION" => "0.001",
   "test" => {
@@ -47,9 +47,9 @@ my %FallbackPrereqs = (
   "Alien::Build::MM" => "0.32",
   "ExtUtils::MakeMaker" => "6.52",
   "File::Spec" => 0,
+  "Test2::V0" => 0,
   "Test::Alien" => 0,
   "Test::More" => 0,
-  "Test::V0" => 0,
   "parent" => 0
 );
 
