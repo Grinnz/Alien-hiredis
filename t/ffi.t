@@ -1,4 +1,4 @@
-use Test2::V0;
+use Test::More;
 use Test::Alien;
 use Alien::hiredis;
 
