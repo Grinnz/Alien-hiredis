@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Require GNU make for building hiredis
 
 0.001     2019-01-30 21:18:12 EST
   - First release
