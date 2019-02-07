@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Require version 0.11.0 of hiredis to support nested multi-bulk replies up to a depth of 7.
 
 0.002     2019-01-31 02:52:07 EST
   - Require GNU make for building hiredis (#1)
