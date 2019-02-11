@@ -6,8 +6,9 @@ Alien::hiredis - Alien wrapper for hiredis
 
 =head1 DESCRIPTION
 
-This module provides the C<hiredis> minimalistic C client library for the
-L<Redis|https://redis.io> database. See L<Alien::Base> for usage.
+This module provides the L<hiredis|https://github.com/redis/hiredis>
+minimalistic C client library for the L<Redis|https://redis.io> database. See
+L<Alien::Base> for usage.
 
 =head1 BUGS
 
