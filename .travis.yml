@@ -12,4 +12,4 @@ perl:
   - "5.10"
   - "5.8"
 install:
-  - cpanm --quiet --installdeps --notest --cpanfile nonexistent .
+  - cpanm --quiet --installdeps --notest --with-develop --cpanfile nonexistent .

@@ -41,6 +41,7 @@
       },
       "develop" : {
          "requires" : {
+            "FFI::Platypus" : "0",
             "Test::Pod" : "1.41"
          }
       },
