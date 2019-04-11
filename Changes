@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Trim unnecessary dynamic requirements for share install.
 
 0.004     2019-04-10 14:58:53 EDT
   - Avoid broken hiredis version 0.13.0.
