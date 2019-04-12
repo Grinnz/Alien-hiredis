@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Isolate dynamic libraries in a share install so XS code is built statically.
 
 0.005     2019-04-11 17:36:06 EDT
   - Trim unnecessary dynamic requirements for share install.

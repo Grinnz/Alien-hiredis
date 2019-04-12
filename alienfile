@@ -22,4 +22,5 @@ share {
     [ '%{make} PREFIX=%{.install.prefix}' ],
     [ '%{make} PREFIX=%{.install.prefix} install' ],
   ];
+  plugin 'Gather::IsolateDynamic';
 };
