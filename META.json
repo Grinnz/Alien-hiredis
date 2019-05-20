@@ -34,7 +34,7 @@
       "configure" : {
          "requires" : {
             "Alien::Build" : "1.61",
-            "Alien::Build::MM" : "0.32",
+            "Alien::Build::MM" : "1.71",
             "Alien::Build::Plugin::Build::Make" : "0.99",
             "ExtUtils::MakeMaker" : "6.52"
          }
@@ -134,7 +134,7 @@
                   "meta_noindex" : 1
                },
                "Dist::Zilla::Role::ModuleMetadata" : {
-                  "Module::Metadata" : "1.000033",
+                  "Module::Metadata" : "1.000036",
                   "version" : "0.006"
                }
             },
@@ -474,7 +474,7 @@
             "class" : "Dist::Zilla::Plugin::InstallGuide",
             "config" : {
                "Dist::Zilla::Role::ModuleMetadata" : {
-                  "Module::Metadata" : "1.000033",
+                  "Module::Metadata" : "1.000036",
                   "version" : "0.006"
                }
             },
@@ -548,7 +548,7 @@
          {
             "class" : "Dist::Zilla::Plugin::AlienBuild",
             "name" : "AlienBuild",
-            "version" : "0.26"
+            "version" : "0.28"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
@@ -615,7 +615,7 @@
       }
    },
    "x_alienfile" : {
-      "generated_by" : "Dist::Zilla::Plugin::AlienBuild version 0.26",
+      "generated_by" : "Dist::Zilla::Plugin::AlienBuild version 0.28",
       "requires" : {
          "share" : {
             "Alien::Build::Plugin::Gather::IsolateDynamic" : "0.48",
