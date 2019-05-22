@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.008     2019-05-22 10:34:56 EDT
   - Require a newer version of Alien::Build::MM for a clean_install bugfix.
   - Reminder: You may need to reinstall XS modules built against Alien::hiredis if you had version 0.005 or older installed previously.
 
