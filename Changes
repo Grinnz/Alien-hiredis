@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Upgrade share install to version 0.14.1 of hiredis.
 
 0.008     2019-05-22 10:34:56 EDT
   - Require a newer version of Alien::Build::MM for a clean_install bugfix.
