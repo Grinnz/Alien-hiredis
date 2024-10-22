@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.013     2024-10-22 18:21:46 EDT
   - Upgrade share install to version 1.2.0 of hiredis. Older (non-broken) system install versions are still supported.
 
 0.012     2020-08-26 12:02:08 EDT (TRIAL RELEASE)
