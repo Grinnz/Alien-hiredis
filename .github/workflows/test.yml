@@ -14,7 +14,7 @@ jobs:
 ### Fast Test on System Perl (system hiredis)
 ###
 
-  ubuntu-latest:
+  ubuntu-latest-system:
     runs-on: ubuntu-latest
 
     env:
@@ -57,7 +57,7 @@ jobs:
 ### Fast Test on System Perl (share install)
 ###
 
-  ubuntu-latest:
+  ubuntu-latest-share:
     runs-on: ubuntu-latest
 
     env:
