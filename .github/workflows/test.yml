@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt install -y hiredis-dev
+      - run: sudo apt install -y libhiredis-dev
       - run: perl -V
       - name: install deps using cpanm
         uses: perl-actions/install-with-cpanm@v1
