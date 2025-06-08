@@ -11,7 +11,7 @@ on:
 jobs:
 
 ###
-### Fast Test on System Perl
+### Fast Test on System Perl (system hiredis)
 ###
 
   ubuntu-latest:
@@ -23,6 +23,50 @@ jobs:
       AUTOMATED_TESTING: 1
       RELEASE_TESTING: 1
       PERL_CARTON_PATH: $GITHUB_WORKSPACE/local
+      ALIEN_INSTALL_TYPE: system
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt install -y hiredis-dev
+      - run: perl -V
+      - name: install deps using cpanm
+        uses: perl-actions/install-with-cpanm@v1
+        with:
+          sudo: false
+          args: --sudo --installdeps --with-develop --with-recommends .
+      - name: configure with Build.PL
+        if: ${{ hashFiles('/Build.PL') != '' }}
+        run: perl Build.PL
+      - name: build with Build.PL
+        if: ${{ hashFiles('/Build.PL') != '' }}
+        run: ./Build
+      - name: test with Build.PL
+        if: ${{ hashFiles('/Build.PL') != '' }}
+        run: ./Build test
+      - name: configure with Makefile.PL
+        if: ${{ hashFiles('/Build.PL') == '' }}
+        run: perl Makefile.PL
+      - name: build with Makefile.PL
+        if: ${{ hashFiles('/Build.PL') == '' }}
+        run: make
+      - name: test with Makefile.PL
+        if: ${{ hashFiles('/Build.PL') == '' }}
+        run: make test
+
+###
+### Fast Test on System Perl (share install)
+###
+
+  ubuntu-latest:
+    runs-on: ubuntu-latest
+
+    env:
+      PERL_USE_UNSAFE_INC: 0
+      AUTHOR_TESTING: 1
+      AUTOMATED_TESTING: 1
+      RELEASE_TESTING: 1
+      PERL_CARTON_PATH: $GITHUB_WORKSPACE/local
+      ALIEN_INSTALL_TYPE: share
 
     steps:
       - uses: actions/checkout@v4
