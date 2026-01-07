@@ -35,8 +35,9 @@ This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
 
-Bundled C<hiredis> library for share installs is licensed under the
-(three-clause) BSD License. See its F<COPYING> file for details.
+Bundled L<hiredis|https://github.com/redis/hiredis> library for
+share installs is licensed under the (three-clause) BSD License.
+See its F<COPYING> file for details.
 
 =head1 SEE ALSO
 
