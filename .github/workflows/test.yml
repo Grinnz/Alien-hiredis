@@ -26,31 +26,31 @@ jobs:
       ALIEN_INSTALL_TYPE: system
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: sudo apt install -y libhiredis-dev
       - run: perl -V
       - name: install deps using cpanm
-        uses: perl-actions/install-with-cpanm@v1
+        uses: perl-actions/install-with-cpanm@v2
         with:
           sudo: false
           args: --sudo --installdeps --with-develop --with-recommends .
       - name: configure with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: perl Build.PL
       - name: build with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: ./Build
       - name: test with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: ./Build test
       - name: configure with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: perl Makefile.PL
       - name: build with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: make
       - name: test with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: make test
 
 ###
@@ -69,30 +69,30 @@ jobs:
       ALIEN_INSTALL_TYPE: share
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: perl -V
       - name: install deps using cpanm
-        uses: perl-actions/install-with-cpanm@v1
+        uses: perl-actions/install-with-cpanm@v2
         with:
           sudo: false
           args: --sudo --installdeps --with-develop --with-recommends .
       - name: configure with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: perl Build.PL
       - name: build with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: ./Build
       - name: test with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: ./Build test
       - name: configure with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: perl Makefile.PL
       - name: build with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: make
       - name: test with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: make test
 
 ###
@@ -129,34 +129,34 @@ jobs:
       image: perldocker/perl-tester:${{ matrix.perl-version }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: perl -V
       - name: install deps using cpanm
-        uses: perl-actions/install-with-cpanm@v1
+        uses: perl-actions/install-with-cpanm@v2
         with:
           sudo: false
           args: -v --installdeps --with-develop --with-recommends .
       - name: configure with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: perl Build.PL
       - name: build with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: ./Build
       - name: test with Build.PL
-        if: ${{ hashFiles('/Build.PL') != '' }}
+        if: ${{ hashFiles('Build.PL') != '' }}
         run: ./Build test
         env:
           AUTHOR_TESTING: 1
           AUTOMATED_TESTING: 1
           RELEASE_TESTING: 1
       - name: configure with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: perl Makefile.PL
       - name: build with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: make
       - name: test with Makefile.PL
-        if: ${{ hashFiles('/Build.PL') == '' }}
+        if: ${{ hashFiles('Build.PL') == '' }}
         run: make test
         env:
           AUTHOR_TESTING: 1
